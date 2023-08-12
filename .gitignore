@@ -2,3 +2,5 @@
 .gradle
 bin
 HELP.md
+build
+.vscode
