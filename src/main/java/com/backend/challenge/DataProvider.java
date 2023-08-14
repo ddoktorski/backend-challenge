@@ -15,7 +15,7 @@ public class DataProvider {
     private static final String DATA_ENDPOINT = "https://payback-coding-challenge.s3.eu-central-1.amazonaws.com/germany.json";
     private static final ObjectMapper MAPPER = new ObjectMapper();
 
-    public static List<PlaceData> getStructuredData() throws IOException {
+    public static List<Place> getStructuredData() throws IOException {
         final JsonNode rawData = getRawData();
         return parseData(rawData);
     }
@@ -29,10 +29,10 @@ public class DataProvider {
         }
     }
 
-    private static List<PlaceData> parseData(final JsonNode rawData) throws IOException {
+    private static List<Place> parseData(final JsonNode rawData) throws IOException {
         try {
             return Arrays.asList(MAPPER.readValue(rawData.get("places").traverse(),
-                    PlaceData[].class));
+                    Place[].class));
         } catch (IOException e) {
             log.error("Failed to parse the data.", e.getMessage());
             throw e;
