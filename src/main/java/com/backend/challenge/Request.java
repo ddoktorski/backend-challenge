@@ -5,6 +5,8 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+import com.backend.challenge.data.container.Place;
+import com.backend.challenge.data.container.PlacesData;
 import com.backend.challenge.util.Haversine;
 import com.backend.challenge.wrapper.GeoApiWrapper;
 
@@ -32,7 +34,7 @@ public class Request {
     }
 
     private void filterOutUnmatchedPlaces(final String search) {
-        places.removeIf(place -> !place.nameContainsPhrase(search));
+        places.removeIf(place -> !place.containsPhrase(search));
     }
 
     private void calculateDistancesToLocation(final double lat, final double lon) {

@@ -1,7 +1,9 @@
-package com.backend.challenge;
+package com.backend.challenge.data.container;
 
 import java.io.IOException;
 import java.util.List;
+
+import com.backend.challenge.data.provider.DataProvider;
 
 import lombok.Getter;
 

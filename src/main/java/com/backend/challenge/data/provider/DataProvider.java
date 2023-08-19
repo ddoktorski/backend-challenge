@@ -1,10 +1,11 @@
-package com.backend.challenge;
+package com.backend.challenge.data.provider;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.Arrays;
 import java.util.List;
 
+import com.backend.challenge.data.container.Place;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
