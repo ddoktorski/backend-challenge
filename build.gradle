@@ -18,6 +18,10 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.apache.commons:commons-lang3:3.13.0'
+	implementation 'org.apache.commons:commons-math3:3.6.1'
+
+	implementation 'com.google.maps:google-maps-services:2.2.0'
+	implementation 'com.google.appengine:appengine-api-1.0-sdk:2.0.17'
 
 	compileOnly 'org.projectlombok:lombok:1.18.22'
     annotationProcessor 'org.projectlombok:lombok:1.18.22'
