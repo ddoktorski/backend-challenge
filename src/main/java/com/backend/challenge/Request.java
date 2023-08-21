@@ -14,7 +14,7 @@ public class Request {
     private List<Place> places;
     private GeoApiWrapper geoApiWrapper;
 
-    private Request(final List<Place> places) {
+    protected Request(final List<Place> places) {
         // This makes the list of places mutable.
         this.places = new ArrayList<>(places);
 
